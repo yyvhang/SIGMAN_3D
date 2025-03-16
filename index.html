@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="MotionStreamer: Streaming Motion Generation via Diffusion-based Autoregressive Model in Causal Latent Space">
+  <meta name="keywords" content="MotionStreamer">
+  <meta name="google-site-verification" content="ciQsol-i_rwd2kkpVI_G-EFX4g72KA2HF-cDUi52lIo" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <!-- <meta property="og:image" content="static/images/teaser.pdf"/> -->
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+  <title>SIGMAN: Scaling 3D Human Gaussian Generation with Millions of Assets</title>
+  <link rel="icon" type="image/x-icon" href="static/images/teaser.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-2 publication-title"><strong><span style="color:#5e7dbd";>SIGMAN</span></strong>: Scaling 3D Human Gaussian Generation with Millions of Assets</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+                <span class="author-block">
+                  <a href="https://yyvhang.github.io">Yuhang Yang</a><sup>1,2</sup>,</span>
+                <span class="author-block">
+                  <a href="">Fengqi Liu</a><sup>2,3</sup>,</span>
+                <span class="author-block">
+                  <a href="https://lewis-lv0.github.io/">Yixing Lu</a><sup>2,4</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="">Qin Zhao</a><sup>2</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://scholar.google.com/citations?user=OoFjjMgAAAAJ&hl=zh-CN">Pingyu Wu</a><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://tiaotiao11-22.github.io/wzhai/">Zhai Wei</a><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://yiranran.github.io/">Ran Yi</a><sup>3</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://scholar.google.com/citations?user=K7rTHNcAAAAJ&hl=zh-CN">Yang Cao</a><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://scholar.google.com/citations?user=yd58y_0AAAAJ&hl=zh-CN">Lizhuang Ma</a><sup>3</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://scholar.google.fr/citations?user=gDnBC1gAAAAJ&hl=en">Zheng-jun Zha</a><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://jtdong.com/">Junting Dong</a><sup>2</sup>,
+                </span>
+                    
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block" style="margin-right: 20px;"><sup>1</sup> USTC </span>
+                    <span class="author-block" style="margin-right: 20px;"><sup>2</sup> Shanghai AI Lab </span>
+                    <span class="author-block" style="margin-right: 20px;"><sup>3</sup> SJTU </span>
+                    <span class="author-block" style="margin-right: 20px;"><sup>4</sup> CMU </span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                      
+                    <!-- ArXiv abstract Link -->
+                      <span class="link-block">
+                      <a
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span>arXiv</span>
+                      </a>
+                    </span>
+                    
+
+                  <span class="link-block">
+                    <a class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                    </a>
+                  </span>
+
+                  <span class="link-block">
+                    <a href="https://drive.google.com/drive/folders/1yucDqpVLL1wBWtP4aKmUSMsgbNbQ2Cp9?usp=sharing"
+                       class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                          <i class="far fa-images"></i>
+                      </span>
+                      <span>Data</span>
+                      </a>
+                  </span>
+
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop" style="max-width: 50%; height: 550px;">
+      <img src="static/images/teaser.png" width="100%" style="height:auto;" alt="teaser">
+      <p>
+      In this work, we construct <b>(a)</b> a large-scale, unified 3D Human Gaussian Dataset, called HGS-1M, to support; <b>(b)</b> the large-scale generation model for 3D human Gaussian generation; <b>(c)</b> This paradigm, with large-scale data, produces high-quality 3D human Gaussians that exhibit complex textures, facial details, and realistic deformation of loose clothing.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Paper abstract -->
+<section class="section hero ">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            3D human digitization has long been a highly pursued yet challenging task. Existing methods aim to generate high-quality 3D digital humans from single or multiple views, but remain primarily constrained by current paradigms and the scarcity of 3D human assets. Specifically, recent approaches fall into several paradigms: optimization-based and feed-forward (both single-view regression and multi-view generation with reconstruction). However, they are limited by slow speed, low quality, cascade reasoning, and ambiguity in mapping low-dimensional planes to high-dimensional space due to occlusion and invisibility, respectively. Furthermore, existing 3D human assets remain small-scale, insufficient for large-scale training. To address these challenges, we propose a latent space generation paradigm for 3D human digitization, which involves compressing multi-view images into Gaussians via a UV-structured VAE, along with DiT-based conditional generation, we transform the ill-posed low-to-high-dimensional mapping problem into a learnable distribution shift, which also supports end-to-end inference. In addition, we employ the multi-view optimization approach combined with synthetic data to construct the HGS-1M dataset, which contains <b>1 million</b> 3D Gaussian assets to support the large-scale training. Experimental results demonstrate that our paradigm, powered by large-scale training, produces high-quality 3D human Gaussians with intricate textures, facial details, and loose clothing deformation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Paper method -->
+<section class="section hero">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">HGS-1M Dataset</h2>
+        <div class="columns is-centered" style="gap: -20px;">
+            <div class="container is-centered" style="max-width: 100%; height: 550px; overflow: hidden;">
+              <img src="static/images/dataset.png" style="width: 100%; height: 100%; object-fit: contain; margin-left: 0%;">
+            </div>
+        </div>
+        <p class="has-text-centered" style="margin-top: 10px; font-size: 1.3em;">
+          The constructed <b>HGS-1M</b> dataset, it contains 1 million 3D Gaussian human assets with different ages, races, appearances, and poses. It supports free-view rendering.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!---           Gallery       -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <br>
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3">3D Human Gaussian Assets</h2>
+    </div>
+    <br>
+    <div class="container">
+      <!-- First row -->
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content has-text-centered">
+            <div class="videobox">
+              <video poster="" id="pelvis" autoplay controls muted loop height="100%">
+                <source src="./static/videos/2.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="content has-text-centered">
+            <div class="videobox">
+              <video poster="" id="pelvis" autoplay controls muted loop height="100%">
+                <source src="./static/videos/1.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content has-text-centered">
+            <div class="videobox">
+              <video poster="" id="pelvis" autoplay controls muted loop height="100%">
+                <source src="./static/videos/combined_video1.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="content has-text-centered">
+            <div class="videobox">
+              <video poster="" id="pelvis" autoplay controls muted loop height="100%">
+                <source src="./static/videos/combined_video2.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second row -->
+        <div class="columns is-centered">
+          <div class="column">
+            <div class="content has-text-centered">
+              <div class="videobox">
+                <video poster="" id="pelvis" autoplay controls muted loop height="100%">
+                  <source src="./static/videos/combined_video3.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+  
+          <div class="column">
+            <div class="content has-text-centered">
+              <div class="videobox">
+                <video poster="" id="pelvis" autoplay controls muted loop height="100%">
+                  <source src="./static/videos/combined_video4.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- 4d_data -->
+    <div class="hero-body">
+      <br>
+      <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">4D Human Gaussian Assets</h2>
+      </div>
+      <br>
+      <div class="container">
+        <!-- First row -->
+        <div class="columns is-centered">
+          <div class="column">
+            <div class="content has-text-centered">
+              <div class="videobox">
+                <video poster="" id="pelvis" autoplay controls muted loop height="100%">
+                  <source src="./static/videos/4d_1.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+  
+          <div class="column">
+            <div class="content has-text-centered">
+              <div class="videobox">
+                <video poster="" id="pelvis" autoplay controls muted loop height="100%">
+                  <source src="./static/videos/4d_2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column">
+            <div class="content has-text-centered">
+              <div class="videobox">
+                <video poster="" id="pelvis" autoplay controls muted loop height="100%">
+                  <source src="./static/videos/combined_4d_video1.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+  
+          <div class="column">
+            <div class="content has-text-centered">
+              <div class="videobox">
+                <video poster="" id="pelvis" autoplay controls muted loop height="100%">
+                  <source src="./static/videos/combined_4d_video2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+     </div>
+  </div>
+</section>
+
+<section class="section hero">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Pipeline</h2>
+        <div class="columns is-centered" style="gap: -20px;">
+            <div class="container is-centered" style="max-width: 100%; height: 550px; overflow: hidden;">
+              <img src="static/images/pipeline.png" style="width: 100%; height: 100%; object-fit: contain; margin-left: 0%;">
+            </div>
+        </div>
+        <p class="has-text-centered" style="margin-top: 10px; font-size: 1.3em;">
+          <b>(a).</b> The UV-structured VAE, which uses human priors to define learnable tokens in
+          UV space and takes them to query multi-view contexts to model the Gaussian latent, then, the latent is decoded into human Gaussians in
+          canonical space and could be driven by differentiable LBS to obtain the final posed human Gaussian. <b>(b).</b> The MM-DiT architecture, it
+          treats the conditional sequence and noise as a whole sequence to complete controllable 3D human Gaussian generation.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- results_gallary -->
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <br>
+      <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">Results Gallery (3D Gaussian)</h2>
+      </div>
+      <br>
+      <div class="container">
+        <!-- First row -->
+        <div class="columns is-centered">
+          <!-- 第一列：图片 -->
+          <div class="column">
+            <div class="content has-text-centered">
+              <h2 class="subtitle is-5 handwriting" style="height: 40px; margin: left 5px; margin: right 5px"><i> <br> <span> Input Image </span></i></h2>
+              <div class="imagebox">
+                <img src="./static/images/input2.jpg" alt="Example 1" style="width:100%;height:auto;">
+              </div>
+            </div>
+          </div>
+                  
+          <!-- 第三列：视频 -->
+          <div class="column">
+            <div class="content has-text-centered">
+              <h2 class="subtitle is-5 handwriting" style="height: 40px; margin: left 5px; margin: right 5px"><i> <br> <span> 3D Gaussians </span></i></h2>
+              <div class="videobox">
+                <video poster="" autoplay controls muted loop height="100%">
+                  <source src="./static/videos/results_gallery/2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <!-- 第二列：图片 -->
+          <div class="column">
+            <div class="content has-text-centered">
+              <h2 class="subtitle is-5 handwriting" style="height: 40px; margin: left 5px; margin: right 5px"><i> <br> <span> Input Image </span></i></h2>
+              <div class="imagebox">
+                <img src="./static/images/input3.jpg" alt="Example 2" style="width:100%;height:auto;">
+              </div>
+            </div>
+          </div>
+        
+          <!-- 第四列：视频 -->
+          <div class="column">
+            <div class="content has-text-centered">
+              <h2 class="subtitle is-5 handwriting" style="height: 40px; margin: left 5px; margin: right 5px"><i> <br> <span> 3D Gaussians </span></i></h2>
+              <div class="videobox">
+                <video poster="" autoplay controls muted loop height="100%">
+                  <source src="./static/videos/results_gallery/3.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Second row -->
+        <div class="columns is-centered">
+          <!-- 第一列：图片 -->
+          <div class="column">
+            <div class="content has-text-centered">
+              <div class="imagebox">
+                <img src="./static/images/input8.jpg" alt="Example 1" style="width:100%;height:auto;">
+              </div>
+            </div>
+          </div>
+                  
+          <!-- 第三列：视频 -->
+          <div class="column">
+            <div class="content has-text-centered">
+              <div class="videobox">
+                <video poster="" autoplay controls muted loop height="100%">
+                  <source src="./static/videos/results_gallery/8.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <!-- 第二列：图片 -->
+          <div class="column">
+            <div class="content has-text-centered">
+              <div class="imagebox">
+                <img src="./static/images/input26.jpg" alt="Example 2" style="width:100%;height:auto;">
+              </div>
+            </div>
+          </div>
+        
+          <!-- 第四列：视频 -->
+          <div class="column">
+            <div class="content has-text-centered">
+              <div class="videobox">
+                <video poster="" autoplay controls muted loop height="100%">
+                  <source src="./static/videos/results_gallery/26.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Third row -->
+        <div class="columns is-centered">
+          <!-- 第一列：图片 -->
+          <div class="column">
+            <div class="content has-text-centered">
+              <div class="imagebox">
+                <img src="./static/images/input46.jpg" alt="Example 1" style="width:100%;height:auto;">
+              </div>
+            </div>
+          </div>
+                  
+          <!-- 第三列：视频 -->
+          <div class="column">
+            <div class="content has-text-centered">
+              <div class="videobox">
+                <video poster="" autoplay controls muted loop height="100%">
+                  <source src="./static/videos/results_gallery/46.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <!-- 第二列：图片 -->
+          <div class="column">
+            <div class="content has-text-centered">
+              <div class="imagebox">
+                <img src="./static/images/input37.jpg" alt="Example 2" style="width:100%;height:auto;">
+              </div>
+            </div>
+          </div>
+        
+          <!-- 第四列：视频 -->
+          <div class="column">
+            <div class="content has-text-centered">
+              <div class="videobox">
+                <video poster="" autoplay controls muted loop height="100%">
+                  <source src="./static/videos/results_gallery/37.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fourth row -->
+        <div class="columns is-centered">
+          <!-- 第一列：图片 -->
+          <div class="column">
+            <div class="content has-text-centered">
+              <div class="imagebox">
+                <img src="./static/images/input223.jpg" alt="Example 1" style="width:100%;height:auto;">
+              </div>
+            </div>
+          </div>
+                  
+          <!-- 第三列：视频 -->
+          <div class="column">
+            <div class="content has-text-centered">
+              <div class="videobox">
+                <video poster="" autoplay controls muted loop height="100%">
+                  <source src="./static/videos/results_gallery/223.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <!-- 第二列：图片 -->
+          <div class="column">
+            <div class="content has-text-centered">
+              <div class="imagebox">
+                <img src="./static/images/input324.jpg" alt="Example 2" style="width:100%;height:auto;">
+              </div>
+            </div>
+          </div>
+        
+          <!-- 第四列：视频 -->
+          <div class="column">
+            <div class="content has-text-centered">
+              <div class="videobox">
+                <video poster="" autoplay controls muted loop height="100%">
+                  <source src="./static/videos/results_gallery/324.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 row -->
+        <div class="columns is-centered">
+          <!-- 第一列：图片 -->
+          <div class="column">
+            <div class="content has-text-centered">
+              <div class="imagebox">
+                <img src="./static/images/input52.jpg" alt="Example 1" style="width:100%;height:auto;">
+              </div>
+            </div>
+          </div>
+                  
+          <!-- 第三列：视频 -->
+          <div class="column">
+            <div class="content has-text-centered">
+              <div class="videobox">
+                <video poster="" autoplay controls muted loop height="100%">
+                  <source src="./static/videos/results_gallery/52.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <!-- 第二列：图片 -->
+          <div class="column">
+            <div class="content has-text-centered">
+              <div class="imagebox">
+                <img src="./static/images/input330.jpg" alt="Example 2" style="width:100%;height:auto;">
+              </div>
+            </div>
+          </div>
+        
+          <!-- 第四列：视频 -->
+          <div class="column">
+            <div class="content has-text-centered">
+              <div class="videobox">
+                <video poster="" autoplay controls muted loop height="100%">
+                  <source src="./static/videos/results_gallery/330.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+     </div>
+
+     <!-- Driven_seq -->
+     <div class="hero-body">
+      <br>
+      <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">Results Gallery (Driven Sequence)</h2>
+      </div>
+      <br>
+      <div class="container">
+        <!-- First row -->
+        <div class="columns is-centered">
+          <div class="column">
+            <div class="content has-text-centered">
+              <h2 class="subtitle is-5 handwriting" style="height: 40px; margin: left 5px; margin: right 5px"><i> <br> <span> 3D Gaussians </span></i></h2>
+              <div class="videobox">
+                <video poster="" autoplay controls muted loop height="100%">
+                  <source src="./static/videos/driven_seq/1.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+                  
+          <!-- 第二列：视频 -->
+          <div class="column">
+            <div class="content has-text-centered">
+              <h2 class="subtitle is-5 handwriting" style="height: 40px; margin: left 5px; margin: right 5px"><i> <br> <span> 3D Gaussians </span></i></h2>
+              <div class="videobox">
+                <video poster="" autoplay controls muted loop height="100%">
+                  <source src="./static/videos/driven_seq/2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="content has-text-centered">
+              <h2 class="subtitle is-5 handwriting" style="height: 40px; margin: left 5px; margin: right 5px"><i> <br> <span> 3D Gaussians </span></i></h2>
+              <div class="videobox">
+                <video poster="" autoplay controls muted loop height="100%">
+                  <source src="./static/videos/driven_seq/3.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <!-- 第四列：视频 -->
+          <div class="column">
+            <div class="content has-text-centered">
+              <h2 class="subtitle is-5 handwriting" style="height: 40px; margin: left 5px; margin: right 5px"><i> <br> <span> 3D Gaussians </span></i></h2>
+              <div class="videobox">
+                <video poster="" autoplay controls muted loop height="100%">
+                  <source src="./static/videos/driven_seq/4.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Second row -->
+        <div class="columns is-centered">
+          <!-- 第一列：图片 -->
+          <div class="column">
+            <div class="content has-text-centered">
+              <div class="videobox">
+                <video poster="" autoplay controls muted loop height="100%">
+                  <source src="./static/videos/driven_seq/9.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+                  
+          <!-- 第三列：视频 -->
+          <div class="column">
+            <div class="content has-text-centered">
+              <div class="videobox">
+                <video poster="" autoplay controls muted loop height="100%">
+                  <source src="./static/videos/driven_seq/11.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="content has-text-centered">
+              <div class="videobox">
+                <video poster="" autoplay controls muted loop height="100%">
+                  <source src="./static/videos/driven_seq/12.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        
+          <!-- 第四列：视频 -->
+          <div class="column">
+            <div class="content has-text-centered">
+              <div class="videobox">
+                <video poster="" autoplay controls muted loop height="100%">
+                  <source src="./static/videos/driven_seq/10.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- row_3 -->
+        <div class="columns is-centered">
+          <div class="column">
+            <div class="content has-text-centered">
+              <div class="videobox">
+                <video poster="" autoplay controls muted loop height="100%">
+                  <source src="./static/videos/driven_seq/13.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+                  
+          <!-- 第三列：视频 -->
+          <div class="column">
+            <div class="content has-text-centered">
+              <div class="videobox">
+                <video poster="" autoplay controls muted loop height="100%">
+                  <source src="./static/videos/driven_seq/16.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="content has-text-centered">
+              <div class="videobox">
+                <video poster="" autoplay controls muted loop height="100%">
+                  <source src="./static/videos/driven_seq/15.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        
+          <!-- 第四列：视频 -->
+          <div class="column">
+            <div class="content has-text-centered">
+              <div class="videobox">
+                <video poster="" autoplay controls muted loop height="100%">
+                  <source src="./static/videos/driven_seq/14.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- row_4 -->
+        <div class="columns is-centered">
+          <!-- 第一列：图片 -->
+          <div class="column">
+            <div class="content has-text-centered">
+              <div class="videobox">
+                <video poster="" autoplay controls muted loop height="100%">
+                  <source src="./static/videos/driven_seq/5.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+                  
+          <!-- 第三列：视频 -->
+          <div class="column">
+            <div class="content has-text-centered">
+              <div class="videobox">
+                <video poster="" autoplay controls muted loop height="100%">
+                  <source src="./static/videos/driven_seq/6.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="content has-text-centered">
+              <div class="videobox">
+                <video poster="" autoplay controls muted loop height="100%">
+                  <source src="./static/videos/driven_seq/7.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        
+          <!-- 第四列：视频 -->
+          <div class="column">
+            <div class="content has-text-centered">
+              <div class="videobox">
+                <video poster="" autoplay controls muted loop height="100%">
+                  <source src="./static/videos/driven_seq/8.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- row_5 -->
+        <div class="columns is-centered">
+          <!-- 第一列：图片 -->
+          <div class="column">
+            <div class="content has-text-centered">
+              <div class="videobox">
+                <video poster="" autoplay controls muted loop height="100%">
+                  <source src="./static/videos/driven_seq/bei3.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+                  
+          <!-- 第三列：视频 -->
+          <div class="column">
+            <div class="content has-text-centered">
+              <div class="videobox">
+                <video poster="" autoplay controls muted loop height="100%">
+                  <source src="./static/videos/driven_seq/bei2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="content has-text-centered">
+              <div class="videobox">
+                <video poster="" autoplay controls muted loop height="100%">
+                  <source src="./static/videos/driven_seq/bei4.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        
+          <!-- 第四列：视频 -->
+          <div class="column">
+            <div class="content has-text-centered">
+              <div class="videobox">
+                <video poster="" autoplay controls muted loop height="100%">
+                  <source src="./static/videos/driven_seq/bei1.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+     </div>
+  </section>
+
+</section>
+
+
+
+<!---          Diversity       -->
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+    </code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+<style>
+@keyframes flowingArrow {
+  0% {
+    opacity: 0.4;
+    transform: translateX(-3px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(3px);
+  }
+  100% {
+    opacity: 0.4;
+    transform: translateX(-3px);
+  }
+}
+
+.videobox {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.videobox video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  background-color: transparent;
+}
+
+.fixed-height {
+  height: 300px;
+  border: none;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.fixed-height video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border: none;
+  background-color: transparent;
+}
+
+video {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+</style>
+
+</body>
+</html>
